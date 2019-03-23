@@ -121,7 +121,7 @@ class _MyHomePageState extends State<MyHomePage> {
 }
 ```
 
-![Image of empty screen]()
+![Image of empty screen](https://raw.githubusercontent.com/thezjy/hasura_vote_flutter/master/empty.png)
 
 Much cleaner! Let's focus on the `MyApp` widget first, which initializes our GraphQL client. We don't need authentication in this project, so a simple HttpLink will do. The URI here is the same as in the last tutorial. If you deployed your own version, use your URI instead. We then make `GraphQLProvider` at the top of our widget tree, in order to use the `Query` and `Mutation` widget in the children.
 
@@ -180,7 +180,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
 Nothing surprising here. We hook up the `ReadProgrammingLanguages` query and use that data to build a List. Hit save and you should see the list appear in you developing device. But since we haven't added the `Vote` mutation yet, clicking the list item will do nothing. What's more, because the subscription API of this `flutter-graphql` is not stable yet, we use polling to achieve real-time. Visit the [Web version](https://hasura-vote.now.sh/) and make some change, you should see real-time updates on your Flutter app.
 
-![Image of list]()
+![Image of list](https://raw.githubusercontent.com/thezjy/hasura_vote_flutter/master/list.png)
 
 ## Add Mutation
 
